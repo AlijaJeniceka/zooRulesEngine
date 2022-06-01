@@ -4,7 +4,7 @@ import lv.alija.zooRulesEngine.model.Visitor;
 rule "Senior"
 
 when
-visitorObject : Visitor(type == "Senior" && age > 64 && haveCertificate==true);
+visitorObject : Visitor(type == "Senior" && age > 64 || haveCertificate==true);
 then
 visitorObject.setTicketPrice(2.50);
 end;
